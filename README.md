@@ -25,7 +25,7 @@ Build a React.js single-page app that showcases a small library of workouts that
 
 ## Installation
 
-### 1 Install dependences
+### 1 Install dependencies
 `npm install`
 
 ### 2 Run JSON Server
