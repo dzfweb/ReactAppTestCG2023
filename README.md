@@ -22,3 +22,14 @@ Build a React.js single-page app that showcases a small library of workouts that
 - It goes without saying, but please document how to run/access your application.
 - tests are great!
 - What features you decide to add is entirely up to you based on your assessment of how to make the application helpful to the end-user, as well as the time limitation.
+
+## Installation
+
+### 1 Install dependences
+`npm install`
+
+### 2 Run JSON Server
+`npm run server`
+
+### 3 Run React Web App
+`npm start`
