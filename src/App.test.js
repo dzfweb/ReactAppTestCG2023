@@ -1,25 +1,70 @@
 import React from 'react';
-import { screen } from '@testing-library/react';
-import { render } from './test-utils';
+import { render } from '@testing-library/react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import '@testing-library/jest-dom';
+
 import WorkoutBoxComponent from './Components/WorkoutBoxComponent/WorkoutBoxComponent';
 
-
 describe('WorkoutBoxComponent', () => {
-  it('displays the workouts fetched from the API', async () => {
-    // Set up a mock for the GetWorkouts function
-    const mockGetWorkouts = jest.fn(() => Promise.resolve([
-      { id: 1, title: 'Workout 1', thumbnail: 'image1.jpg', duration: 30, levelTag: 'Intermediate', impactTag: 'Low', description: 'A workout for intermediate level athletes with low impact exercises.' },
-      { id: 2, title: 'Workout 2', thumbnail: 'image2.jpg', duration: 45, levelTag: 'Advanced', impactTag: 'High', description: 'A workout for advanced level athletes with high impact exercises.' }
-    ]));
-    jest.mock('./Services/WorkoutServices', () => ({
-      GetWorkouts: mockGetWorkouts
-    }));
+  const workouts = [
+    {
+      id: 1,
+      title: 'Workout 1',
+      thumbnail: 'thumbnail1.jpg',
+      duration: 30,
+      levelTag: 'Intermediate',
+      impactTag: 'Low',
+      description: 'Workout 1 description',
+    },
+    {
+      id: 2,
+      title: 'Workout 2',
+      thumbnail: 'thumbnail2.jpg',
+      duration: 45,
+      levelTag: 'Advanced',
+      impactTag: 'High',
+      description: 'Workout 2 description',
+    },
+  ];
 
-    // Render the component
-    render(<WorkoutBoxComponent />);
+  it('renders workout boxes with correct data', () => {
+    const { getByText, getByAltText } = render(
+      <Router>
+        <WorkoutBoxComponent workouts={workouts} />
+      </Router>
+    );
 
-    // Wait for the data to be fetched and displayed
-    await screen.findByText('Workout 1');
-    await screen.findByText('Workout 2');
+    workouts.forEach(workout => {
+      const workoutTitle = getByText(workout.title);
+      const workoutImage = getByAltText(workout.title);
+      const durationBadge = getByText(`${workout.duration} minutes`);
+      const levelAndImpactTags = getByText(
+        `${workout.levelTag} level • ${workout.impactTag} impact`
+      );
+      const description = getByText(workout.description);
+
+      expect(workoutTitle).toBeInTheDocument();
+      expect(workoutImage).toBeInTheDocument();
+      expect(durationBadge).toBeInTheDocument();
+      expect(levelAndImpactTags).toBeInTheDocument();
+      expect(description).toBeInTheDocument();
+    });
+  });
+
+  it('renders "Detail" button with correct link', () => {
+    const { getAllByText } = render(
+      <Router>
+        <WorkoutBoxComponent workouts={workouts} />
+      </Router>
+    );
+
+    workouts.forEach(workout => {
+      const detailButtons = getAllByText('Detail').filter(
+        button =>
+          button.closest('a').getAttribute('href') === `/detail/${workout.id}`
+      );
+
+      expect(detailButtons.length).toBe(1);
+    });
   });
 });

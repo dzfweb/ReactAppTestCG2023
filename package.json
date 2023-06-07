@@ -1,5 +1,9 @@
 {
   "name": "campgladiatorapp",
+  "jest": {
+    "verbose": true,
+    "testEnvironment": "jsdom"
+  },
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,6 +16,7 @@
     "@testing-library/user-event": "^14.4.3",
     "framer-motion": "^6.5.1",
     "json-server": "^0.17.1",
+    "node-fetch": "^2.6.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^3.11.0",
@@ -42,5 +47,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "jest": "^26.6.2",
+    "jest-config": "^26.6.2",
+    "jest-environment-jsdom": "^26.6.2",
+    "jest-expo": "^45.0.1"
   }
 }
