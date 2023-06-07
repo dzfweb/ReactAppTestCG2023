@@ -1,5 +1,15 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=dzfweb_ReactAppTestCG2023&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=dzfweb_ReactAppTestCG2023)
+
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=dzfweb_ReactAppTestCG2023&metric=coverage)](https://sonarcloud.io/summary/new_code?id=dzfweb_ReactAppTestCG2023)
+
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=dzfweb_ReactAppTestCG2023&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=dzfweb_ReactAppTestCG2023)
+
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=dzfweb_ReactAppTestCG2023&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=dzfweb_ReactAppTestCG2023)
+
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=dzfweb_ReactAppTestCG2023&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=dzfweb_ReactAppTestCG2023)
+
 ## Available Scripts
 
 In the project directory, you can run:
