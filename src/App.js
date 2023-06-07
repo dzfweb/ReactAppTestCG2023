@@ -15,7 +15,7 @@ import workoutServices from './Services/WorkoutServices';
 function App() {
   const [workouts, setWorkouts] = useState([]);
 
-  const { GetWorkouts } = workoutServices();
+  const { GetWorkouts, GetWorkoutById } = workoutServices();
 
   useEffect(() => {
     async function load() {
