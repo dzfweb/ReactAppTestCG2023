@@ -1,35 +1,68 @@
-# CG Mars Workout - Frontend Coding Challenge
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Overview
+## Available Scripts
 
-Camp Gladiator is going to Mars! The year is 2065 and CG is about to start virtual workouts from Mars. For this challenge you'll be showing off your creative and design skills, as well as your proficiency with React.js/Javascript/HTML/CSS.
+In the project directory, you can run:
 
-## Requirements
+### `npm start`
 
-Build a React.js single-page app that showcases a small library of workouts that our campers can access at any time and watch the workouts from anywhere, on any device via a modern web browser. Don't worry, we'll provide the content.
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-**Your app should include the following:**
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
 
-- branded dashboard page showing-casing all available workouts (use the `workouts.json` file provided in this repo)
-- the workout page - which is accessible by clicking on any of the workouts on the dashboard. This page needs to include all of the provided information about the workout along with the playable video. Each workout should be accessable via its own unique URL.
-- Should be well designed and usable with any common device with a modern web browser.
-- Consume the data provided in workouts.json as the content for your app.
+### `npm test`
 
-## Additional Information
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-- Please limit your work time to 4 hours max for this project
-- You can use your own design system or feel free to use the [CG design library](https://bit.cloud/campgladiator/cgui-core) as a reference for your design
-- It goes without saying, but please document how to run/access your application.
-- tests are great!
-- What features you decide to add is entirely up to you based on your assessment of how to make the application helpful to the end-user, as well as the time limitation.
+### `npm run build`
 
-## Installation
+Builds the app for production to the `build` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-### 1 Install dependencies
-`npm install`
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
 
-### 2 Run JSON Server
-`npm run server`
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### 3 Run React Web App
-`npm start`
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+
+### Analyzing the Bundle Size
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+
+### Making a Progressive Web App
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+
+### Advanced Configuration
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+
+### Deployment
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+
+### `npm run build` fails to minify
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
